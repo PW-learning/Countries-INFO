@@ -1,0 +1,12 @@
+* {padding: 0;margin: 0;}
+body {background: #eee;}
+.main {width:340px;margin: auto;padding:5px;}
+h1 {text-align: center;margin: 1rem auto;}
+#search {margin: 1rem auto;padding:5px;width: 100%;height: 36px;text-align: center;border:1px solid #777;border-radius: 1rem;outline: none;}
+.wrp {margin:.5rem auto;padding:5px;background: #fff;border-radius:.5rem;border-left:5px solid rgb(5, 182, 144);box-shadow: 0 0 5px #777;overflow: hidden;}
+.head {padding: 5px;}
+.head span {display: inline-block;vertical-align: top;}
+.body {padding: 5px;}
+.body span {padding: 5px;margin: 5px;display: inline-block;vertical-align: middle;}
+.hid {display: none;}
+.arr {float:right;margin-top: -5px;}

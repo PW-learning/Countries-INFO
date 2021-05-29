@@ -1,0 +1,14 @@
+{
+ "manifest_version": 2,
+ "name": "Countries INFO",
+ "description": "Information about all countries in the world",
+ "version": "1.0.0",
+ "author": "By students of Top Center Academy in Istanbul",
+ "icons": {"128": "icon_128.png"},
+ "browser_action": {
+   "default_icon": "icon.png",
+   "default_title": "top center",
+   "default_popup": "popup.html"
+ },
+ "permissions": ["activeTab"]
+}
