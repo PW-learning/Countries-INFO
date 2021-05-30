@@ -16,7 +16,7 @@ function getRez(){
     .then(u => u.json())
     .then(d => {
         let x = d.filter(v => {
-            return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.alpha2Code.toLowerCase().startsWith(inp.value.toLowerCase())
+            return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(inp.value)
         })
         x.forEach(r => {
 
@@ -26,7 +26,7 @@ function getRez(){
             <div class="head">
                 <img src="${r.flag}" alt="${r.name}" width="20" />
                 <span>${r.name}</span>
-                <span>${r.callingCodes}</span>
+                <span>+${r.callingCodes}</span>
                 <span class="arr">↕️</span>
             </div>
             <div class="body hid">

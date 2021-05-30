@@ -9,4 +9,4 @@ h1 {text-align: center;margin: 1rem auto;}
 .body {padding: 5px;}
 .body span {padding: 5px;margin: 5px;display: inline-block;vertical-align: middle;}
 .hid {display: none;}
-.arr {float:right;margin-top: -5px;}
+.arr {float:right;margin-top: -5px;cursor: pointer;}
