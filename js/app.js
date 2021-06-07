@@ -24,19 +24,27 @@ function getRez(){
             wrp.className = "wrp"
             wrp.innerHTML = `
             <div class="head">
-                <img src="${r.flag}" alt="${r.name}" width="20" />
+                <div>
+                <img src="${r.flag}" alt="${r.name}" width="40" />
                 <span>${r.name}</span>
                 <span>+${r.callingCodes}</span>
+                </div>
                 <span class="arr">↕️</span>
             </div>
             <div class="body hid">
+                <p>
                 <span>Local Name : ${r.nativeName}</span>
                 <span>Capital : ${r.capital}</span>
+                </p>
+                <p>
                 <span>Currency : ${r.currencies[0].code} ${r.currencies[0].symbol}</span>
                 <span>Time Zone(s) : ${r.timezones}</span>
+                </p>
+                <p>
                 <span>Short Names : ${r.alpha2Code}, </span>
                 <span>${r.alpha3Code}</span>
-                <div>
+                </p>
+                <div class="body-details">
                     Learn more on Google maps :<br />
                     <a href="https://www.google.com/maps/place/${r.nativeName}/?hl=ar" target="_blank">
                         Arabic
@@ -53,9 +61,9 @@ function getRez(){
             s.appendChild(wrp)
         });
         let j = document.querySelectorAll(".arr")
-        j.forEach((v,i) => {
+        j.forEach(v => {
             v.addEventListener("click", () => {
-                v.parentNode.nextElementSibling.classList.toggle("hid")
+                 v.parentElement.nextElementSibling.classList.toggle("hid")
             })
         })
     })
