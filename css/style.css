@@ -9,7 +9,7 @@ h1 {text-align: center;margin: 1rem auto;}
 .body {padding: 5px;}
 .body span {padding: 5px;margin: 5px;display: inline-block;vertical-align: middle;}
 .body-details {text-align: center;padding:5px 0;}
-.body-details a {padding: 8px 0 0; display: inline-block;text-decoration: none;color: #777;}
+.body-details a {padding: 8px 0 0; display: inline-block;text-decoration: none;color: royalblue;}
 .body-details a:hover {text-decoration: underline;color: rgb(75, 74, 74);}
 .hid {display: none;}
 .arr {display: block;cursor: pointer;}

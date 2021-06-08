@@ -10,22 +10,23 @@ inp.addEventListener("keyup", () => {
 
 // functions
 getRez()
-function getRez(){
+
+function getRez() {
     s.innerHTML = ""
     fetch(url)
-    .then(u => u.json())
-    .then(d => {
-        let x = d.filter(v => {
-            return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(inp.value)
-        })
-        x.forEach(r => {
+        .then(u => u.json())
+        .then(d => {
+            let x = d.filter(v => {
+                return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(inp.value)
+            })
+            x.forEach(r => {
 
-            const wrp = document.createElement("div")
-            wrp.className = "wrp"
-            wrp.innerHTML = `
+                const wrp = document.createElement("div")
+                wrp.className = "wrp"
+                wrp.innerHTML = `
             <div class="head">
                 <div>
-                <img src="${r.flag}" alt="${r.name}" width="40" />
+                <img src="${r.flag}" alt="${r.name}" width="30" />
                 <span>${r.name}</span>
                 <span>+${r.callingCodes}</span>
                 </div>
@@ -58,13 +59,13 @@ function getRez(){
                 </div>
             </div>
             `
-            s.appendChild(wrp)
-        });
-        let j = document.querySelectorAll(".arr")
-        j.forEach(v => {
-            v.addEventListener("click", () => {
-                 v.parentElement.nextElementSibling.classList.toggle("hid")
+                s.appendChild(wrp)
+            });
+            let j = document.querySelectorAll(".arr")
+            j.forEach(v => {
+                v.addEventListener("click", () => {
+                    v.parentElement.nextElementSibling.classList.toggle("hid")
+                })
             })
         })
-    })
 }
