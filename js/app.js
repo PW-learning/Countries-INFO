@@ -1,7 +1,7 @@
 // Elements
 let s = document.getElementById("show")
 let inp = document.getElementById("search")
-let url = "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;alpha3Code;callingCodes;capital;timezones;nativeName;currencies;flag"
+let url = "https://restcountries.eu/rest/v2/all?fields=name;alpha2Code;alpha3Code;callingCodes;capital;timezones;nativeName;currencies;flag;region;languages"
 
 // Events
 inp.addEventListener("keyup", () => {
@@ -23,10 +23,16 @@ function getRez() {
 
                 const wrp = document.createElement("div")
                 wrp.className = "wrp"
+                let ls = r.languages.map(l => {
+                    return l.name;
+                })
+                let languagesNames = ls.map(l => {
+                    return ` ${l}`;
+                })
                 wrp.innerHTML = `
             <div class="head">
                 <div>
-                <img src="${r.flag}" alt="${r.name}" width="30" />
+                <img src="${r.flag}" alt="${r.name}'s flag" width="30" />
                 <span>${r.name}</span>
                 <span>+${r.callingCodes}</span>
                 </div>
@@ -34,16 +40,19 @@ function getRez() {
             </div>
             <div class="body hid">
                 <p>
-                <span>Local Name : ${r.nativeName}</span>
+                <span>-Local Name : ${r.nativeName}</span>
+                <span>Region : ${r.region}</span>
+                </p>
+                <p>
+                <span>-Currency : ${r.currencies[0].code} ${r.currencies[0].symbol}</span>
                 <span>Capital : ${r.capital}</span>
+                <span>-Time Zone(s) :  ${r.timezones} </span>
                 </p>
                 <p>
-                <span>Currency : ${r.currencies[0].code} ${r.currencies[0].symbol}</span>
-                <span>Time Zone(s) : ${r.timezones}</span>
-                </p>
-                <p>
-                <span>Short Names : ${r.alpha2Code}, </span>
+                <span>-Short Names : ${r.alpha2Code}, </span>
                 <span>${r.alpha3Code}</span>
+                </p>
+                <p><span>-Language(s): ${languagesNames}</span>
                 </p>
                 <div class="body-details">
                     Learn more on Google maps :<br />
