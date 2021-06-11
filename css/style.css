@@ -1,12 +1,15 @@
-* {padding: 0;margin: 0;}
-body {background: #eee;}
-.main {width:340px;margin: auto;padding:5px;}
+* {padding: 0;margin: 0;box-sizing: border-box;}
+body {background: #eee;font-family: 'Segoe UI', sans-serif;}
+.main {width:400px;margin: 0 auto;padding:5px;}
 h1 {text-align: center;margin: 1rem auto;}
-#search {margin: 1rem auto;padding:5px;width: 100%;height: 36px;text-align: center;border:1px solid #777;border-radius: 1rem;outline: none;}
-.wrp {margin:.5rem auto;padding:5px;background: #fff;border-radius:.5rem;border-left:5px solid rgb(5, 182, 144);box-shadow: 0 0 5px #777;overflow: hidden;}
-.head {padding: 5px;}
-.head span {display: inline-block;vertical-align: top;}
+#search {margin: 0rem auto 1rem;;padding:5px;width: 100%;height: 42px;text-align: center;border:1px solid #777;border-radius: 1rem;outline: none;font-size: 1rem;}
+.wrp {margin: 1rem auto;padding:5px;background: #ccc;border-radius:.5rem;border-left:5px solid rgb(5, 182, 144);box-shadow: 0 0 5px #777;overflow: hidden;}
+.head {padding: 5px;display: flex;justify-content: space-between;align-items: center;}
+.head span {display: inline-block;vertical-align: top; word-wrap: anywhere;}
 .body {padding: 5px;}
 .body span {padding: 5px;margin: 5px;display: inline-block;vertical-align: middle;}
+.body-details {text-align: center;padding:5px 0;}
+.body-details a {padding: 8px 0 0; display: inline-block;text-decoration: none;color: royalblue;}
+.body-details a:hover {text-decoration: underline;color: rgb(75, 74, 74);}
 .hid {display: none;}
-.arr {float:right;margin-top: -5px;cursor: pointer;}
+.arr {display: block;cursor: pointer;}
