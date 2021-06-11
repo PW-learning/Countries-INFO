@@ -9,20 +9,42 @@ inp.addEventListener("keyup", () => {
 })
 
 // functions
-getRez()
-
+getRez();
+// replace all null instances with the string "Unknown", null will show as undefined, not a user friendly term/experience;
+function replaceNull(obj) {
+    obj.forEach(country => {
+        // if the currency's symbol is absecnt;
+        if (!country.currencies[0].hasOwnProperty("symbol")) {
+            country.currencies[0].symbol = "Unknown"
+        }
+        // if the currency's name is absecnt;
+        if (!country.currencies[0].hasOwnProperty("name")) {
+            country.currencies[0].name = "Unknown"
+        }
+        // if the currency's code is absecnt;
+        if (!country.currencies[0].hasOwnProperty("code")) {
+            country.currencies[0].code = "Unknown"
+        }
+        // one special case where one language is null;
+        if (!country.languages[0].hasOwnProperty("iso639_1")) {
+            country.languages[0].iso639_1 = "Unknown"
+        }
+        
+    })
+   return obj;
+}
 function getRez() {
     s.innerHTML = ""
     fetch(url)
         .then(u => u.json())
         .then(d => {
-            let x = d.filter(v => {
+            let x = replaceNull(d).filter(v => {
                 return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(inp.value)
-            })
+            });
             x.forEach(r => {
-
                 const wrp = document.createElement("div")
                 wrp.className = "wrp"
+                // get all languages dynamically
                 let ls = r.languages.map(l => {
                     return l.name;
                 })
