@@ -62,19 +62,19 @@ function getRez() {
             </div>
             <div class="body hid">
                 <p>
-                <span>-Local Name : ${r.nativeName}</span>
+                <span>- Local Name : ${r.nativeName}</span>
                 <span>Region : ${r.region}</span>
                 </p>
                 <p>
-                <span>-Currency : ${r.currencies[0].code} ${r.currencies[0].symbol}</span>
+                <span>- Currency : ${r.currencies[0].code} ${r.currencies[0].symbol}</span>
                 <span>Capital : ${r.capital}</span>
-                <span>-Time Zone(s) :  ${r.timezones} </span>
+                <span>- Time Zone(s) :  ${r.timezones} </span>
                 </p>
                 <p>
-                <span>-Short Names : ${r.alpha2Code}, </span>
+                <span>- Short Names : ${r.alpha2Code}, </span>
                 <span>${r.alpha3Code}</span>
                 </p>
-                <p><span>-Language(s): ${languagesNames}</span>
+                <p><span>- Language(s): ${languagesNames}</span>
                 </p>
                 <div class="body-details">
                     Learn more on Google maps :<br />
