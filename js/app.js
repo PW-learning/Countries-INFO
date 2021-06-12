@@ -35,11 +35,13 @@ function replaceNull(obj) {
 }
 function getRez() {
     s.innerHTML = ""
+    let reg = /^[+]|0{0,2}/;
+    let newStr = inp.value.replace(reg,"")
     fetch(url)
         .then(u => u.json())
         .then(d => {
             let x = replaceNull(d).filter(v => {
-                return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(inp.value)
+                return v.name.toLowerCase().startsWith(inp.value.toLowerCase()) || v.callingCodes.includes(newStr)
             });
             x.forEach(r => {
                 const wrp = document.createElement("div")
