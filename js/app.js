@@ -35,7 +35,7 @@ function replaceNull(obj) {
 }
 function getRez() {
     s.innerHTML = ""
-    let reg = /^[+]{0,2}|0{0,2}/;
+    let reg = /^[+]|0{0,2}/;
     let newStr = inp.value.replace(reg,"")
     fetch(url)
         .then(u => u.json())
