@@ -2,7 +2,7 @@
 A Chrome extension to get the most important information about various countries. 
 <div align="center">
   
-![](https://github.com/PW-learning/topcenter/blob/master/img/readme.md%20img.png)
+![](https://github.com/PW-learning/topcenter/blob/master/img/readme.md%20img.jpeg)
   
 </div>
 
